@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for f in 'ls ~/Library/Preferences/ByHost/com.apple.notificationcenterui.*.plist';
+do defaults write $f doNotDisturb 0;
+done && killall NotificationCenter
